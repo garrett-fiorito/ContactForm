@@ -99,3 +99,16 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Error messages below the form fields */
+.field-error {
+    color: #b42318;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Hide empty error messages */
+.field-error:empty {
+    display: none;
+}

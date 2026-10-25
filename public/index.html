@@ -7,24 +7,28 @@
     <title>Contact Form</title>
     <link rel="icon" href="icons8-dev-32.png">
     <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
 </head>
 <body>
 
     <main>
         <h1>Contact Form</h1>
 
-        <form action="#" method="get">
+        <form action="#" method="get" novalidate>
 
             <div class="form-grid">
 
                 <div class="form-group">
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="fname">
+                    <p id="fname-error" class="field-error"></p>
                 </div>
 
                 <div class="form-group">
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="lname">
+                    <p id="lname-error" class="field-error"></p>
+
                 </div>
 
                 <div class="form-group">
@@ -40,11 +44,13 @@
                 <div class="form-group">
                     <label for="linkedin">LinkedIn URL</label>
                     <input type="url" id="linkedin" name="linkedin">
+                    <p id="linkedin-error" class="field-error"></p>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email">
+                    <p id="email-error" class="field-error"></p>
                 </div>
 
             </div>
@@ -61,6 +67,7 @@
                         <option value="event">Event</option>
                         <option value="other">Other</option>
                     </select>
+                    <p id="meeting-error" class="field-error"></p>
                 </div>
 
                 <div class="form-group">
