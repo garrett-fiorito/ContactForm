@@ -112,3 +112,13 @@ button:hover {
 .field-error:empty {
     display: none;
 }
+
+/* Confirmation page back button */
+.back-button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
