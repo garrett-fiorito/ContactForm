@@ -122,3 +122,22 @@ button:hover {
     border-radius: 4px;
     text-decoration: none;
 }
+
+/* Shared navigation */
+.site-nav {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-nav a {
+    color: #1a5a96;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}

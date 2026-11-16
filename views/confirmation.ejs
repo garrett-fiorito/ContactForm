@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Confirmed</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("partials/nav") %>
+    <main>
+        <h1>Thank You!</h1>
+        <p>Your contact information has been added to the guestbook.</p>
+
+        <h2>Your submission</h2>
+
+        <%- include("partials/contact-details", { contact: contact }) %>
+
+        <a href="/contact" class="back-button">Back to Contact Form</a>
+    </main>
+</body>
+</html>

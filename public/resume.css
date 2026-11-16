@@ -1,0 +1,237 @@
+/* Page */
+:root {
+    --primary-color: #222222;
+    --secondary-color: #1a5a96;
+    --background-color: #eeeeee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+/* Resume container */
+
+.resume {
+    max-width: 900px;
+
+    margin: 40px auto;
+    padding: 40px 50px;
+
+    background-color: white;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Header */
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 3px solid #333333;
+}
+
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+
+.header-content {
+    flex: 1;
+}
+
+
+.header-content h1 {
+    margin: 0 0 10px 0;
+
+    font-size: 36px;
+}
+
+
+.contact-info {
+    margin: 5px 0;
+}
+
+
+.contact-info span {
+    margin: 0 6px;
+}
+
+
+.phone {
+    margin: 5px 0;
+}
+
+
+/* Links */
+
+a {
+    color: #1a5a96;
+
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    text-decoration: underline;
+    
+}
+
+
+/* Sections */
+
+section {
+    margin-top: 35px;
+}
+
+
+h2 {
+    margin-bottom: 18px;
+    padding-bottom: 7px;
+    font-size: 24px;
+    border-bottom: 2px solid #555555;
+    letter-spacing: 0.5px;
+}
+
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+/* Resume items */
+
+article {
+    margin-bottom: 28px;
+}
+
+
+.item-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.subtitle {
+    margin: 4px 0;
+    font-weight: bold;
+    color: #555555;
+}
+
+
+.date {
+    margin: 0;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+/* Lists */
+
+ul {
+    padding-left: 22px;
+    line-height: 1.5;
+}
+
+
+li {
+    margin-bottom: 7px;
+}
+
+
+.skills-list {
+    line-height: 1.6;
+}
+
+
+/* Paragraphs */
+
+p {
+    line-height: 1.5;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    border-top: 1px solid #bbbbbb;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+.site-nav {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-nav a {
+    font-weight: bold;
+}
+
+/* Media Query */
+
+@media (max-width: 650px) {
+
+    .resume {
+        margin: 0;
+        padding: 25px;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .item-heading {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .date {
+        margin-bottom: 5px;
+    }
+
+    .contact-info span {
+        display: none;
+    }
+
+    .contact-info a {
+        display: block;
+        margin: 5px 0;
+    }
+}

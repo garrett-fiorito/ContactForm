@@ -21,7 +21,6 @@ const meetingError = document.getElementById("meeting-error");
 form.addEventListener("submit", function (event) {
     // Start each submission attempt with no errors
     let isValid = true;
-    let firstInvalidField = null;
 
     firstNameError.textContent = "";
     lastNameError.textContent = "";
@@ -40,18 +39,12 @@ form.addEventListener("submit", function (event) {
     if (firstNameValue === "") {
         firstNameError.textContent = "Please enter your first name.";
         isValid = false;
-        if (firstInvalidField === null) {
-            firstInvalidField = firstName;
-        }
     }
 
     // Last name validation
     if (lastNameValue === "") {
         lastNameError.textContent = "Please enter your last name.";
         isValid = false;
-        if (firstInvalidField === null) {
-            firstInvalidField = lastName;
-        }
     }
 
     // Email validation. Optional, but must be valid when user inputs it
@@ -60,9 +53,6 @@ form.addEventListener("submit", function (event) {
         if (emailPattern.test(emailValue) === false) {
             emailError.textContent = "Enter an email address such as name@example.com.";
             isValid = false;
-            if (firstInvalidField === null) {
-                firstInvalidField = email;
-            }
         }
     }
 
@@ -70,9 +60,6 @@ form.addEventListener("submit", function (event) {
     if (mailing.checked === true && emailValue === "") {
         emailError.textContent = "Enter your email address to join the mailing list.";
         isValid = false;
-        if (firstInvalidField === null) {
-            firstInvalidField = email;
-        }
     }
 
     // LinkedIn validation. Optional, but must start with the correct URL
@@ -80,9 +67,6 @@ form.addEventListener("submit", function (event) {
         if (linkedinValue.startsWith("https://linkedin.com/in/") === false) {
             linkedinError.textContent = "LinkedIn address must start with https://linkedin.com/in/.";
             isValid = false;
-            if (firstInvalidField === null) {
-                firstInvalidField = linkedin;
-            }
         }
     }
 
@@ -90,9 +74,6 @@ form.addEventListener("submit", function (event) {
     if (meetingValue === "") {
         meetingError.textContent = "Please select how we met.";
         isValid = false;
-        if (firstInvalidField === null) {
-            firstInvalidField = meeting;
-        }
     }
 
     // If any of the rules failed, stop submission

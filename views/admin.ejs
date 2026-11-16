@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook Submissions</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("partials/nav") %>
+
+    <main>
+        <h1>Guestbook Submissions</h1>
+
+        <% if (contacts.length === 0) { %>
+            <p>No contacts have been submitted yet.</p>
+        <% } else { %>
+            <p>Total submissions: <%= contacts.length %></p>
+
+            <% for (let i = 0; i < contacts.length; i++) { %>
+                <section class="contact-card">
+                    <h2>Submission <%= contacts[i].id %></h2>
+
+                    <%- include("partials/contact-details", {
+                        contact: contacts[i]
+                    }) %>
+                </section>
+            <% } %>
+        <% } %>
+    </main>
+</body>
+</html>
